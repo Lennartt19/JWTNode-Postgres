@@ -23,7 +23,7 @@ jobs:
         run: docker build -t backend-app .
       
       - name: Build DOCKER-COMPOSE
-        run: docker-compose up -d
+        run: docker compose up -d
       
       - name: docker contenedores Activos
         run: docker ps
