@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,3 +21,9 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t backend-app .
+      
+      - name: Build DOCKER-COMPOSE
+        run: docker-compose up -d
+      
+      - name: docker contenedores Activos
+        run: docker ps
